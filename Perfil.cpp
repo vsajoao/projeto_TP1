@@ -15,7 +15,7 @@ public:
     Perfil(const std::string& nomeInicial) {
         if (nomeValido(nomeInicial)) {
             nome = nomeInicial;
-            std::cout << "Perfil criado: " << nome << std::endl;
+            std::cout << "Perfil: " << nome << std::endl;
         } else {
             std::cout << "O perfil no armazenamento eh invalido" << std::endl;
         }
@@ -23,7 +23,7 @@ public:
 };
 
 int main() {
-    Perfil p1("Moderado");
-    Perfil p2("neutro");
+    Perfil p1("Moderado"); // teste com o nome valido
+    Perfil p2("neutro"); // Teste com o nome invalido
     return 0;
 }
