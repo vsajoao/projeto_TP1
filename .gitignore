@@ -1,0 +1,14 @@
+# Diretórios de build
+bin/
+obj/
+
+# Arquivos de dependência e layout do Code::Blocks
+*.depend
+*.layout
+
+# Binários e objetos
+*.o
+*.exe
+
+# (Opcional) Logs, caches, etc.
+*.log
