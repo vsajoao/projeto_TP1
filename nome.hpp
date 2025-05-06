@@ -1,5 +1,5 @@
-#ifndef DOMINIOS_HPP_INCLUDED
-#define DOMINIOS_HPP_INCLUDED
+#ifndef NOME_HPP_INCLUDED
+#define NOME_HPP_INCLUDED
 #include <string>
 using namespace std;
 class Nome {

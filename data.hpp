@@ -1,5 +1,5 @@
-#ifndef DOMINIOS_HPP_INCLUDED
-#define DOMINIOS_HPP_INCLUDED
+#ifndef DATA_HPP_INCLUDED
+#define DATA_HPP_INCLUDED
 #include <string>
 
 class Data{

@@ -1,10 +1,3 @@
-// dominios.cpp
-// Implementação da classe Name com validação usando exceções.
-// As regras de validação são:
-// 1) Máximo de 20 caracteres.
-// 2) Apenas letras (A-Z, a-z), dígitos (0-9) e espaços.
-// 3) Não permitir dois espaços consecutivos.
-
 #include "nome.hpp"
 #include <stdexcept>    // Para std::invalid_argument
 #include <list>         // Para std::list usado na verificação
