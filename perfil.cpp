@@ -21,9 +21,3 @@ public:
         }
     }
 };
-
-int main() {
-    Perfil p1("Moderado"); // teste com o nome valido
-    Perfil p2("neutro"); // Teste com o nome invalido
-    return 0;
-}
