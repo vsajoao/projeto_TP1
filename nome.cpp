@@ -1,49 +1,62 @@
 #include "nome.hpp"
-#include <iostream>
-#include <list>
-#include <string>
+#include <stdexcept>    // Para std::invalid_argument
+#include <list>         // Para std::list usado na verificação
+
 using namespace std;
+
+// Valida o nome de acordo com as regras descritas acima.
+// Lança invalid_argument com mensagem apropriada se o nome for inválido.
+// Caso contrário, retorna true.
 bool Nome::validar(string nome) {
-  const int tamanho_max = 20;
-  std::list<char> minhaLista;
-  if (nome.length() > tamanho_max)
-    return false;
-  for (char c : nome) {
-    if (c < '0' || c > '9') {
-      if (c < 'A' || c > 'Z') {
-        if (c < 'a' || c > 'z') {
-          if (c != ' ') // Permitir espaço
-            return false;
+    const int TAMANHO_MAX = 20;
+    list<char> caracteresValidos;
+
+    // 1) Verifica comprimento máximo
+    if (nome.length() > TAMANHO_MAX) {
+        // Nome muito longo
+        throw invalid_argument("Nome excede 20 caracteres.");
+    }
+
+    // 2) Verifica cada caractere
+    for (char c : nome) {
+        bool digito    = (c >= '0' && c <= '9');
+        bool maiuscula = (c >= 'A' && c <= 'Z');
+        bool minuscula = (c >= 'a' && c <= 'z');
+        bool espaco    = (c == ' ');
+
+        // Se não for nenhum dos tipos válidos, erro
+        if (!(digito || maiuscula || minuscula || espaco)) {
+            throw invalid_argument("Nome contém caractere inválido: '");
         }
-      }
-    }
-    minhaLista.push_back(c); // Adiciona todos os caracteres válidos à lista (incluindo espaços)
-  }
 
-  // Para verificar o conteúdo da lista (para debug)
-  std::string listaComoString;
-  for (char c : minhaLista) {
-    listaComoString += c;
-  }
-
-  // Correção da lógica para verificar espaços consecutivos
-  int espacosConsecutivos = 0;
-  for (char c : nome) {
-    if (c == ' ') {
-      espacosConsecutivos += 1; // Incrementa contador se encontrar espaço
-    } else {
-      espacosConsecutivos = 0; // Zera contador se não for espaço
+        caracteresValidos.push_back(c);
     }
 
-    if (espacosConsecutivos == 2) { // Se encontrarmos 2 espaços consecutivos
-      return false;
+    // 3) Verifica espaços consecutivos
+    int contEspacos = 0;
+    for (char c : nome) {
+        if (c == ' ') {
+            contEspacos++;
+            if (contEspacos >= 2) {
+                throw invalid_argument("Nome nao pode conter dois espaços consecutivos.");
+            }
+        } else {
+            contEspacos = 0;
+        }
     }
-  }
-  return true;
+
+    // Se chegou até aqui, está válido
+    return true;
 }
+
+// Tenta atribuir o nome após validação.
+// Se validar() lançar exceção, ela será propagada para quem chamou.
+// Retorna true se o nome foi atribuído com sucesso.
 bool Nome::setNome(string nome) {
-  if (!validar(nome))
-    return false;
-  this->nome = nome;
-  return true;
+    // Chama validar; se inválido, invalid_argument é lançado
+    validar(nome);
+
+    // Atribui o valor ao atributo interno
+    this->nome = nome;
+    return true;
 }

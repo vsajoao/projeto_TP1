@@ -4,20 +4,19 @@
 using namespace std;
 class Nome {
 
-    private:
-
-        string nome;
-        bool validar(string);
-
-    public:
-        bool setNome(string);
-        string getNome();
-    };
-
+private:
+    const string DEFAULT = "";
+    string nome;
+    bool validar(string);
+public:
+    bool setNome(string);
+    string getNome();
+};
 inline string Nome::getNome(){
     return nome;
 }
-#endif 
+#endif // DOMINIOS_HPP_INCLUDED
+
 
 
 

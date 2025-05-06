@@ -1,6 +1,10 @@
 #include "senha.hpp"
 #include <iostream>
 #include <string>
+
+using namespace std;
+
+
 Senha::Senha() : senha("123456") {}
 
 bool Senha::validarSenha(string senha){
@@ -10,7 +14,7 @@ bool Senha::validarSenha(string senha){
     string letrasMi = "abcdefghijklmnopqrstuvwxyz";
     string simbolos = "#$%&";
     string permitidos = numeros + letrasMa + letrasMi + simbolos;
-    cout << permitidos <<endl;
+    //cout << permitidos <<endl;
 
 
     //verifica se é tamanho 6
@@ -23,7 +27,7 @@ bool Senha::validarSenha(string senha){
         return false;
     }
 
-    //verifica se é caracter certo e se n�o se repete
+    //verifica se é caracter certo e nao se repete
     for (int i=0; i < senha.length() -1; i++){
         if(permitidos.find_first_of(senha[i]) != npos){}
         else {

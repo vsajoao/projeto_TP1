@@ -1,5 +1,5 @@
-#ifndef DOMINIOS_HPP_INCLUDED
-#define DOMINIOS_HPP_INCLUDED
+#ifndef CODIGO_HPP_INCLUDED
+#define CODIGO_HPP_INCLUDED
 #include <string>
 class Codigo {
 

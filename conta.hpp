@@ -18,14 +18,12 @@ class Conta {
 
     public:
 
-    Conta(CPF cpf, Nome nome, Senha senha) {
-        this->cpf = cpf;
-        this->nome = nome;
-        this->senha = senha;   
+    Conta(CPF cpf, Nome nome, Senha senha) 
+        : cpf(cpf), nome(nome), senha(senha) {
     }
 
     string getCPF();
-    bool setCPF(string);
+    void setCPF(string);
     string getNome();
     bool setNome(string);
     string getSenha();   
@@ -36,8 +34,8 @@ class Conta {
     inline string Conta::getCPF(){
         return cpf.getCPF();
     }
-    inline bool Conta::setCPF(string valor){
-       return cpf.setCPF(valor);
+    inline void Conta::setCPF(string valor){
+       cpf.setCPF(valor);
     }
     inline string Conta::getNome(){
         return nome.getNome();
