@@ -15,3 +15,5 @@ public:
     void setData(const std::string& data);
 
 };
+
+#endif // DOMINIOS_HPP_INCLUDED
