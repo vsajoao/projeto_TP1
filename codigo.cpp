@@ -1,25 +1,27 @@
 #include "codigo.hpp"
 #include <iostream>
 #include <string>
-//---------------------------------------------------CODIGO---------------------------------------------------------------------------//
+
+using namespace std;
+
 Codigo::Codigo() : codigo("00000") {}
 
-std::string Codigo::getCodigo() const {
+string Codigo::getValor() const {
     return codigo;
 }
 
-void Codigo::setCodigo(const std::string& codigo) {
+void Codigo::setCodigo(string codigo) {
 
     //verifica tamanho
     if (codigo.length() != 5) {
-        std::cout << "Erro: O código deve ter exatamente 5 dígitos" << std::endl;
+        cout << "Erro: O código deve ter exatamente 5 dígitos" << endl;
         return;
     }
 
     //verifica se tem char
     for (char c : codigo) {
         if (!isdigit(c)) {
-            std::cout << "Erro: O código deve conter apenas números" << std::endl;
+            cout << "Erro: O código deve conter apenas números" << endl;
             return;
         }
     }

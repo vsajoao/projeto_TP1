@@ -10,11 +10,9 @@ private:
     bool validar(string);
 public:
     bool setNome(string);
-    string getNome();
+    string getValor();
 };
-inline string Nome::getNome(){
-    return nome;
-}
+
 #endif // DOMINIOS_HPP_INCLUDED
 
 

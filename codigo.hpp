@@ -1,16 +1,18 @@
 #ifndef CODIGO_HPP_INCLUDED
 #define CODIGO_HPP_INCLUDED
 #include <string>
+
+using namespace std;
 class Codigo {
 
 private:
-    std::string codigo;
+    string codigo;
 
 public:
     Codigo();
-    std::string getCodigo() const;
-    void setCodigo(const std::string& codigo);
+    string getValor() const;
+    void setCodigo(string);
 
 };
 
-#endif // DOMINIOS_HPP_INCLUDED
+#endif

@@ -32,7 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="../carteira.hpp" />
+		<Unit filename="../dinheiro.cpp" />
+		<Unit filename="../ordem.hpp" />
+		<Unit filename="../perfil.cpp" />
+		<Unit filename="../perfil.hpp" />
+		<Unit filename="../preco.hpp" />
+		<Unit filename="../quantidade.cpp" />
+		<Unit filename="../quantidade.hpp" />
+		<Unit filename="../senha.hpp" />
+		<Unit filename="carteira.hpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
