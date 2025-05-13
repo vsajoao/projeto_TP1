@@ -8,7 +8,7 @@ class Senha{
 
     private:
     string senha;
-    bool validarSenha(string senha);
+    void validarSenha(string senha);
 
     public:
     Senha();
