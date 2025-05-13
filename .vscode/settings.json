@@ -58,5 +58,8 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "files.associations": {
+    "string": "cpp"
+  },
   "C_Cpp.default.compilerPath": "gcc"
 }

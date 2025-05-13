@@ -1,6 +1,8 @@
-#ifndef DOMINIOS_HPP_INCLUDED
-#define DOMINIOS_HPP_INCLUDED
+#ifndef SENHA_HPP_INCLUDED
+#define SENHA_HPP_INCLUDED
 #include <string>
+
+using namespace std;
 
 class Senha{
 
@@ -15,4 +17,4 @@ class Senha{
 
 };
 
-#endif // DOMINIOS_HPP_INCLUDED
+#endif
