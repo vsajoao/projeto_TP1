@@ -53,7 +53,7 @@ public:
      * @brief Retorna o nome da conta.
      * @return Objeto Nome.
      */
-    Nome getNome();
+    Nome getValor();  //alterei de getNome para getValor devido a alteração de jota
 
     /**
      * @brief Define o nome da conta.
@@ -82,7 +82,7 @@ inline CPF Conta::getCPF(){
 inline void Conta::setCPF(CPF cpf){
    this->cpf = cpf;
 }
-inline Nome Conta::getNome(){
+inline Nome Conta::getValor(){
     return nome;
 }
 inline void Conta::setNome(Nome nome){
