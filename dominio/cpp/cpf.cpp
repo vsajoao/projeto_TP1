@@ -45,9 +45,6 @@ bool CPF::validarNumerosCPF(int *array) {
     cout << "CPF verificador 1 erro" << endl;
     return false;
   }
-  if (x1 != array[9]) 
-    throw invalid_argument("CPF verificador 1 erro");
-    
 
   // calcula o segundo digito verificador
   for (int i = 0; i < 10; i++)
@@ -63,9 +60,7 @@ bool CPF::validarNumerosCPF(int *array) {
     cout << "CPF verificador 2 erro" << endl;
     return false;
   }
-  /*if (x2 != array[10])
-    throw invalid_argument("CPF verificador 2 erro");
-*/
+  
   return true;
 }
 
@@ -82,35 +77,33 @@ bool CPF::numerosIguais(int *array) {
 
 // verifica se o cpf é valido(11digitos, digitos não todos iguais, digitos
 // verificadores corretos) string valor se o cpf for valido retorna true
-bool CPF::validarCPF(string valor) {
+void CPF::validarCPF(string valor) {
   // verifica se o cpf tem 11 digitos
   if (valor.length() != 11)
-    return false;
+    throw invalid_argument("CPF tamanho invalido");
 
   // verifica se todos os caracteres são digitos e copiaos para array
   if (!cpf_array(valor, this->array_cpf))
-    return false;
+    throw invalid_argument("CPF erro caractere não digito ");
 
   // verifica se todos os digitos são iguais
   if (!numerosIguais(this->array_cpf))
-    return false;
+    throw invalid_argument("CPF todos digitos iguais");
 
   // verifica se os digitos verificadores são validos
   if (!validarNumerosCPF(this->array_cpf))
-    return false;
+    throw invalid_argument("CPF digitos verificadores invalidos");
 
-  // cout <<"CPF valido"<< endl;
-  return true;
+  
+  
 }
 
 // seta o cpf
 // string valor -> somente numeros
 // retorna false se o cpf for invalido
-bool CPF::setCPF(string valor) {
-  if (!validarCPF(valor)) {
-    cout << "CPF invalido" << endl;
-    return false;
-  }
+void CPF::setCPF(string valor) {
+  validarCPF(valor);  // vai lançar exceção se CPF for inválido
   this->numero_cpf = valor;
-  return true;
+
 }
+

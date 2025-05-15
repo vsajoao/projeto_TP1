@@ -5,7 +5,7 @@ using namespace std;
 class Nome {
 
 private:
-    const string DEFAULT = "";
+
     string nome;
     bool validar(string);
 public:
