@@ -20,7 +20,7 @@ int Data::diasNoMes(int mes, int ano) const {
     }
 }
 
-void Data::setData(const std::string& data) {
+void Data::setData(string data) {
 
     //verifica tamanho correto
     if (data.size() != 8) {
@@ -63,6 +63,6 @@ void Data::setData(const std::string& data) {
     this->data = data;
 }
 
-std::string Data::getData() const {
+string Data::getValor() const {
     return data;
 }

@@ -1,23 +1,16 @@
-#include <iostream>
-#include <string>
+#include "perfil.hpp"
 
-class Perfil {
-private:
-    std::string nome;
+Perfil::Perfil() : perfil("sem perfil") {}
 
-    // Função auxiliar para validar o nome
-    bool nomeValido(const std::string& n) const {
-        return n == "Conservador" || n == "Moderado" || n == "Agressivo";
+void Perfil::setPerfil(string perfil){
+    if(perfil != "Conservador" &&
+       perfil!= "Moderado" &&
+       perfil != "Agressivo") {
+        throw std::invalid_argument("Perfil inválido. Deve ser Conservador, Moderado ou Agressivo.");
     }
+       this->perfil = perfil;
+}
 
-public:
-    // Construtor com validação
-    Perfil(const std::string& nomeInicial) {
-        if (nomeValido(nomeInicial)) {
-            nome = nomeInicial;
-            std::cout << "Perfil: " << nome << std::endl;
-        } else {
-            std::cout << "O perfil no armazenamento eh invalido" << std::endl;
-        }
-    }
-};
+string Perfil::getValor(){
+    return perfil;
+}

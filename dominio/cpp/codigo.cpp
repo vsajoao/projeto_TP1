@@ -1,29 +1,29 @@
 #include "codigo.hpp"
 #include <iostream>
 #include <string>
-//---------------------------------------------------CODIGO---------------------------------------------------------------------------//
+#include <stdexcept>  // necessário para std::invalid_argument
+
+using namespace std;
+
 Codigo::Codigo() : codigo("00000") {}
 
-std::string Codigo::getCodigo() const {
+string Codigo::getValor() const {
     return codigo;
 }
 
-void Codigo::setCodigo(const std::string& codigo) {
-
-    //verifica tamanho
+void Codigo::setCodigo(string codigo) {
+    // Verifica tamanho
     if (codigo.length() != 5) {
-        std::cout << "Erro: O código deve ter exatamente 5 dígitos" << std::endl;
-        return;
+        throw invalid_argument("Erro: O código deve ter exatamente 5 dígitos");
     }
 
-    //verifica se tem char
+    // Verifica se contém apenas números
     for (char c : codigo) {
         if (!isdigit(c)) {
-            std::cout << "Erro: O código deve conter apenas números" << std::endl;
-            return;
+            throw invalid_argument("Erro: O código deve conter apenas números");
         }
     }
 
-    //se tudo certo atribui valor cc atribui valor default 00000
+    // Se tudo certo, atribui valor
     this->codigo = codigo;
 }

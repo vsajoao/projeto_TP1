@@ -2,18 +2,21 @@
 #define DATA_HPP_INCLUDED
 #include <string>
 
+using namespace std;
+
+
 class Data{
 
 private:
-    std::string data;
+    string data;
     bool ehAnoBissexto(int ano) const;
     int diasNoMes(int mes, int ano) const;
 
 public:
     Data();
-    std::string getData() const;
-    void setData(const std::string& data);
+    string getValor() const;
+    void setData(string);
 
 };
 
-#endif // DOMINIOS_HPP_INCLUDED
+#endif

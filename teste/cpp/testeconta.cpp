@@ -23,7 +23,7 @@ void TesteConta::testarCenario(){
   nome.setNome(V_NOME_VALIDO);
   conta -> setNome(nome);
 
-  if(conta->getNome().getNome()!= V_NOME_VALIDO)
+  if(conta->getValor().getValor()!= V_NOME_VALIDO)
     estado = FALHA;
   
   Senha senha;
