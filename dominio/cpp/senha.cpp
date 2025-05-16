@@ -7,7 +7,7 @@ using namespace std;
 
 Senha::Senha() : senha("123456") {}
 
-void Senha::validarSenha(string senha){
+void Senha::validar(string senha){
     static const size_t npos = -1;
     string numeros = "0123456789";
     string letrasMa = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -60,11 +60,11 @@ void Senha::validarSenha(string senha){
     //cout << "validos: " + valido << endl;
 }
 
-void Senha::setSenha(string senhaProposta){
-    validarSenha(senhaProposta);
+void Senha::setValor(string senhaProposta){
+    setValor(senhaProposta);
     senha = senhaProposta;
 }
 
-string Senha::getSenha(){
+string Senha::getValor(){
     return senha;
 }
