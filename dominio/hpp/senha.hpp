@@ -1,5 +1,5 @@
-/// dominios.hpp
-/// Declaração da classe de domínio Dinheiro.
+/// senha.hpp
+/// Declaração da classe de domínio Senha.
 
 
 #ifndef SENHA_HPP_INCLUDED
