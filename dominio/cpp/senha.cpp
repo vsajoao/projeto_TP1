@@ -60,8 +60,8 @@ void Senha::validar(string senha){
     //cout << "validos: " + valido << endl;
 }
 
-void Senha::setValor(string senhaProposta){
-    setValor(senhaProposta);
+void Senha::setSenha(string senhaProposta){
+    setSenha(senhaProposta);
     senha = senhaProposta;
 }
 

@@ -13,7 +13,7 @@ void TUCodigo_de_Negociacao::tearDown(){
 }
 void TUCodigo_de_Negociacao::testarCenarioSucesso(){
     try{
-        codigo_de_negociacao->setValor(VALOR_VALIDO);
+        codigo_de_negociacao->setCodigoDeNegociacao(VALOR_VALIDO);
         if(codigo_de_negociacao->getValor() != VALOR_VALIDO)
             estado = FALHA;
     }
@@ -23,7 +23,7 @@ void TUCodigo_de_Negociacao::testarCenarioSucesso(){
 }
 void TUCodigo_de_Negociacao::testarCenarioFalha(){
     try{
-        codigo_de_negociacao->setValor(VALOR_INVALIDO);
+        codigo_de_negociacao->setCodigoDeNegociacao(VALOR_INVALIDO);
         estado = FALHA;
     }
     catch(invalid_argument &excecao){

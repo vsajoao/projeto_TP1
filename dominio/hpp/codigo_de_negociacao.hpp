@@ -26,7 +26,7 @@ class Codigo_de_Negociacao {
         string getValor();
         /// Muda codigo de negociacao após validação, 
         /// Retorna invalid_argument se não atender a requisitos e possui valor com qual requisito não foi atendido em seu valor
-        void setValor(string);
+        void setCodigoDeNegociacao(string);
 
 
 };

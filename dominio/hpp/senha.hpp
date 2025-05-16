@@ -34,7 +34,7 @@ class Senha{
     public:
     Senha();
     // Muda a string senha, validando primeiro
-    void setValor(string senha);
+    void setSenha(string senha);
     // Retorna a string senha
     string getValor();
 

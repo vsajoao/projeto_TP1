@@ -28,8 +28,8 @@ void Codigo_de_Negociacao::validar(string codigo){
 }
 
 
-void Codigo_de_Negociacao::setValor(string codigoProposto){
-    validar(codigoProposto);
+void Codigo_de_Negociacao::setCodigoDeNegociacao(string codigoProposto){
+    setCodigoDeNegociacao(codigoProposto);
     this->codigo_de_negociacao = codigoProposto;
 }
 

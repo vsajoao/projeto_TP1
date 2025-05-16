@@ -13,7 +13,7 @@ void TUSenha::tearDown(){
 }
 void TUSenha::testarCenarioSucesso(){
     try{
-        senha->setValor(VALOR_VALIDO);
+        senha->setSenha(VALOR_VALIDO);
         if(senha->getValor() != VALOR_VALIDO)
             estado = FALHA;
     }
@@ -23,7 +23,7 @@ void TUSenha::testarCenarioSucesso(){
 }
 void TUSenha::testarCenarioFalha(){
     try{
-        senha->setValor(VALOR_INVALIDO);
+        senha->setSenha(VALOR_INVALIDO);
         estado = FALHA;
     }
     catch(invalid_argument &excecao){
