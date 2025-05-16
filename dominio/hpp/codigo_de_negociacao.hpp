@@ -23,10 +23,10 @@ class Codigo_de_Negociacao {
         Codigo_de_Negociacao();
         Codigo_de_Negociacao(string);
         // Retorna string codigo de Negociação
-        string getCodigo();
+        string getValor();
         /// Muda codigo de negociacao após validação, 
         /// Retorna invalid_argument se não atender a requisitos e possui valor com qual requisito não foi atendido em seu valor
-        void setCodigo(string);
+        void setValor(string);
 
 
 };
