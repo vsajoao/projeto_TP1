@@ -1,6 +1,8 @@
 #include "data.hpp"
 #include <iostream>
 #include <string>
+#include <stdexcept>
+
 
 using namespace std;
 
@@ -23,17 +25,14 @@ int Data::diasNoMes(int mes, int ano) const {
 void Data::setData(string data) {
 
     //verifica tamanho correto
-    if (data.size() != 8) {
-        cout << "Erro: Data deve conter 8 dígitos." << endl;
-        return;
-    }
+    if (data.size() != 8) 
+        throw invalid_argument("Erro: Data deve conter 8 dígitos." );
 
     //verifica se tem char
     for (char c : data) {
-        if (!isdigit(c)) {
-            cout << "Erro: Data deve conter apenas dígitos." << endl;
-            return;
-        }
+        if (!isdigit(c)) 
+            throw invalid_argument("Erro: Data deve conter apenas dígitos.");
+        
     }
 
     //extrai partes da data e verifica datas invalidas
@@ -42,22 +41,19 @@ void Data::setData(string data) {
     int dia = stoi(data.substr(6, 2));
 
 
-    if (ano < 1 || ano > 9999) {
-        cout << "Erro: Ano inválido." << endl;
-        return;
-    }
+    if (ano < 1 || ano > 9999) 
+        throw invalid_argument("Erro: Ano inválido."); 
 
 
-    if (mes < 1 || mes > 12) {
-        cout << "Erro: Mês inválido." << endl;
-        return;
-    }
+    if (mes < 1 || mes > 12)
+        throw invalid_argument("Erro: Mês inválido.");
+
 
     int maxDias = diasNoMes(mes, ano);
-    if (dia < 1 || dia > maxDias) {
-        cout << "Erro: Dia inválido para o mês/ano." << endl;
-        return;
-    }
+    if (dia < 1 || dia > maxDias) 
+        throw invalid_argument("Erro: Dia inválido para o mês/ano."); 
+        
+
 
     //se passou pelos testes atribui valor cc atribui valor default de AAAAMMDD
     this->data = data;

@@ -19,7 +19,7 @@
 class Ordem {
 private:
     const Codigo codigo;                 ///< Código identificador único da ordem (5 dígitos numéricos).
-    const CodNegociacao codNegociacao;   ///< Código de negociação do papel (ex: PETR4), até 12 caracteres.
+    const Codigo_de_Negociacao codNegociacao;   ///< Código de negociação do papel (ex: PETR4), até 12 caracteres.
     const Data data;                     ///< Data da ordem no formato AAAAMMDD.
     const Quantidade quantidade;         ///< Quantidade de papéis comprados na ordem (1 a 1.000.000).
     const Dinheiro preco;                ///< Preço total da ordem, calculado pelo sistema.
@@ -37,7 +37,7 @@ public:
     /// @param preco Valor total da ordem.
     /// @param codigoCarteira Código da carteira associada à ordem.
     Ordem(const Codigo& codigo,
-          const CodNegociacao& codNegociacao,
+          const Codigo_de_Negociacao& codNegociacao,
           const Data& data,
           const Quantidade& quantidade,
           const Dinheiro& preco,
@@ -57,7 +57,7 @@ public:
 
     /// @brief Retorna o código de negociação do papel.
     /// @return Referência constante ao objeto CodNegociacao.
-    const CodNegociacao& getCodNegociacao() const {
+    const Codigo_de_Negociacao& getCodNegociacao() const {
         return codNegociacao;
     }
 
