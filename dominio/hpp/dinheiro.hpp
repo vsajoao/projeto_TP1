@@ -25,17 +25,19 @@ private:
     static constexpr float LIMITE_cima = 1000000.00f;  ///< Valor máximo permitido.
     float valor_dinheiro; ///< Armazena o valor validado.
 ///
-    /**
-     * @brief Valida se o valor está dentro dos limites aceitáveis.
-     * @param valor Valor a ser validado.
-     * @throw std::invalid_argument Se valor estiver fora dos limites.
-     */
+
+     /// @brief Valida se o valor está dentro dos limites aceitáveis.
+     /// @param valor Valor a ser validado.
+     /// @throw std::invalid_argument Se valor estiver fora dos limites.
+///     
+
     void validarValoremDinheiro(float valor);
 
 ///@brief Construtor padrão da classe Dinheiro que irá definir o valor recebido e retornar o valor monetário.
 ///
 public:
-     ///
+
+    ///
      /// @brief Define (ou altera) o valor do atributo privado valor.
      /// @param valor Valor a ser definido.
      /// @throw std::invalid_argument Se o valor for inválido.
