@@ -1,0 +1,60 @@
+\chapter{Projeto TP1 -\/ Técnicas de Programação 1}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Projeto TP1 -\/ Técnicas de Programação 1@{Projeto TP1 -\/ Técnicas de Programação 1}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Este projeto tem como objetivo a implementação de um sistema para aprendizado sobre investimentos financeiros, utilizando a linguagem C++. O sistema permite a criação e gerenciamento de contas, carteiras e ordens de investimento, seguindo uma arquitetura em camadas.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{📌 Funcionalidades}{📌 Funcionalidades}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{Gerenciamento de conta}}
+\begin{DoxyItemize}
+\item Criar, editar, excluir e visualizar conta.
+\item Autenticação via CPF e senha.
+\end{DoxyItemize}
+\item {\bfseries{Gerenciamento de carteiras}}
+\begin{DoxyItemize}
+\item Criar, editar, excluir e listar carteiras associadas à conta.
+\item Cada carteira tem um código, nome e perfil (Conservador, Moderado, Agressivo).
+\end{DoxyItemize}
+\item {\bfseries{Gerenciamento de ordens}}
+\begin{DoxyItemize}
+\item Criar e excluir ordens de investimento.
+\item Cada ordem contém um código, código de negociação, data, preço e quantidade.
+\item O preço da ordem é calculado com base no preço médio do papel na data informada.
+\item Ordens não podem ser editadas, apenas excluídas.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{📂 Estrutura do Código}{📂 Estrutura do Código}}\label{md__r_e_a_d_m_e_autotoc_md2}
+O projeto segue uma arquitetura em camadas, composta por\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Camada de apresentação}} ~\newline
+ Responsável pela interface com o usuário e validação dos dados de entrada.
+\item {\bfseries{Camada de serviço}} ~\newline
+ Contém a lógica de negócio e manipulação de dados.
+\item {\bfseries{Domínios e Entidades}} ~\newline
+
+\begin{DoxyItemize}
+\item {\bfseries{Domínios}}\+: Classes responsáveis por representar valores, como Código, CPF, Data, Nome, Perfil, Dinheiro, Quantidade e Senha.
+\item {\bfseries{Entidades}}\+: Representam objetos do sistema, como Conta, Carteira e Ordem.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{🛠️ Tecnologias e Ferramentas}{🛠️ Tecnologias e Ferramentas}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Linguagem\+:}} C++
+\item {\bfseries{Compilador\+:}} GCC / Code\+::\+Blocks
+\item {\bfseries{Ferramentas de documentação\+:}} Doxygen
+\item {\bfseries{Controle de versão\+:}} Git e Git\+Hub
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{📌 Requisitos}{📌 Requisitos}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Código deve ser compatível com Code\+::\+Blocks.
+\item Implementação de testes unitários para classes de domínio e entidades.
+\item Métodos {\ttfamily set} devem lançar exceções para valores inválidos.
+\item Classes devem ser documentadas e gerar documentação em HTML via Doxygen.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{🚀 Como Executar}{🚀 Como Executar}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item Clone o repositório\+: \`{}\`{}\`{}bash git clone \href{mailto:git@github.com}{\texttt{ git@github.\+com}}\+:vsajoao/projeto\+\_\+\+TP1.\+git cd projeto\+\_\+\+TP1 
+\end{DoxyEnumerate}
