@@ -1,3 +1,4 @@
+///Arthur Frauches 241017728
 /// @file dinheiro.hpp
 /// @brief Declaração da classe de domínio Dinheiro.
 
@@ -34,26 +35,24 @@ private:
 ///@brief Construtor padrão da classe Dinheiro que irá definir o valor recebido e retornar o valor monetário.
 ///
 public:
-    /**
-     * @brief Define (ou altera) o valor do atributo privado valor.
-     * @param valor Valor a ser definido.
-     * @throw std::invalid_argument Se o valor for inválido.
-     */
+     ///
+     /// @brief Define (ou altera) o valor do atributo privado valor.
+     /// @param valor Valor a ser definido.
+     /// @throw std::invalid_argument Se o valor for inválido.
 ///   
 void setDinheiro(float valor);
 
-    /**
-     * @brief Retorna o valor atual armazenado no atributo valor.
-     * @return Valor em float armazenado em valor_dinheiro.
-     */
+    ///
+     /// @brief Retorna o valor atual armazenado no atributo valor.
+     /// @return Valor em float armazenado em valor_dinheiro.
+     ///
 ///    
 float getDinheiro();
 };
 
-/**
- * @brief Retorna o valor armazenado em valor_dinheiro.
- * @return float Valor monetário.
- */
+ /// @brief Retorna o valor armazenado em valor_dinheiro.
+ /// @return float Valor monetário.
+ ///
 inline float Dinheiro::getDinheiro() {
     return valor_dinheiro;
 }
