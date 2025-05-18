@@ -1,70 +1,94 @@
 /// @file carteira.hpp
-/// @brief Declaração da entidade Carteira que representa uma carteira de investimentos no sistema.
+/// @brief Declaração da Entidade de Carteira.
 
 #ifndef CARTEIRA_HPP_INCLUDED
 #define CARTEIRA_HPP_INCLUDED
-
 #include "nome.hpp"
-#include "codigo.hpp"
 #include "perfil.hpp"
+#include "codigo.hpp"
+
+#include <stdexcept>
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 /// @class Carteira
 /// @brief Representa uma carteira de investimentos associada a uma conta.
 ///
 /// Cada carteira possui um código identificador, um nome e um perfil de investimento.
 /// O código é imutável após a criação. O nome e o perfil podem ser alterados.
-class Carteira {
+
+class Carteira{
 private:
-    Codigo codigo; ///< Código único da carteira (5 dígitos numéricos).
-    Nome nome;     ///< Nome da carteira (até 20 caracteres, sem espaços consecutivos).
-    Perfil perfil; ///< Perfil de investimento: Conservador, Moderado ou Agressivo.
+
+  Codigo codigo; ///< Código único da carteira (5 dígitos numéricos).
+  Nome nome;     ///< Nome da carteira (até 20 caracteres, sem espaços consecutivos).
+  Perfil perfil; ///< Perfil de investimento: Conservador, Moderado ou Agressivo.
 
 public:
-    /// @brief Construtor da classe Carteira.
-    ///
-    /// Inicializa a carteira com um código, nome e perfil válidos.
-    ///
-    /// @param cod Código identificador da carteira.
-    /// @param nom Nome atribuído à carteira.
-    /// @param perf Perfil de investimento associado.
-    Carteira(Codigo cod, Nome nom, Perfil perf)
-        : codigo(cod), nome(nom), perfil(perf) {}
+/// @brief Construtor da classe Carteira.
+///
+/// Inicializa a carteira com um código, nome e perfil válidos.
+///
+/// @param codigo Código identificador da carteira.
+/// @param nome Nome atribuído à carteira.
+/// @param perfil Perfil de investimento associado.
 
-    /// @brief Retorna o código da carteira.
-    /// @return Objeto Codigo armazenado.
-    Codigo getCodigo() {
-        return codigo;
-    }
+    Carteira() {};
 
-    /// @brief Retorna o nome atual da carteira.
-    /// @return Objeto Nome armazenado.
-    Nome getNome() {
-        return nome;
-    }
+    Carteira(Codigo codigo, Nome nome, Perfil perfil);
 
-    /// @brief Retorna o perfil de investimento da carteira.
-    /// @return Objeto Perfil armazenado.
-    Perfil getPerfil() {
-        return perfil;
-    }
+/// @brief Retorna o código da carteira.
+/// @return Objeto Codigo armazenado.
+    Codigo getCodigo();
 
-    /// @brief Altera o nome da carteira após validação.
-    ///
-    /// O novo nome deve estar dentro das regras do domínio Nome.
-    ///
-    /// @param novoNome String contendo o novo nome proposto.
-    void setNome(string novoNome) {
-        nome.setNome(novoNome);
-    }
+/// @brief Altera o codigo da carteira após validação.
+/// @param codigo String contendo o novo perfil proposto.
+    void setCodigo(Codigo codigo);
 
-    /// @brief Altera o perfil da carteira após validação.
-    ///
-    /// O novo perfil deve ser "Conservador", "Moderado" ou "Agressivo".
-    ///
-    /// @param novoPerfil String contendo o novo perfil proposto.
-    void setPerfil(string novoPerfil) {
-        perfil.setPerfil(novoPerfil);
-    }
+/// @brief Retorna o nome atual da carteira.
+/// @return Objeto Nome armazenado.
+    Nome getValor();
+
+/// @brief Altera o nome da carteira após validação.
+/// @param novoNome String contendo o novo nome proposto.
+    void setNome(Nome nome);
+
+/// @brief Retorna o perfil de investimento da carteira.
+/// @return Objeto Perfil armazenado.
+    Perfil getPerfil();
+
+/// @brief Altera o perfil da carteira após validação.
+/// @param perfil String contendo o novo perfil proposto.
+    void setPerfil(Perfil perfil);
+
 };
 
-#endif // CARTEIRA_HPP_INCLUDED
+
+
+inline Codigo Carteira::getCodigo(){
+    return codigo;
+}
+
+inline void Carteira::setCodigo(Codigo codigo){
+    this->codigo = codigo;
+}
+
+inline Nome Carteira::getValor(){
+    return nome;
+}
+
+inline void Carteira::setNome(Nome nome){
+    this->nome = nome;
+}
+
+inline Perfil Carteira::getPerfil(){
+    return perfil;
+}
+
+inline void Carteira::setPerfil(Perfil perfil){
+    this->perfil = perfil;
+}
+
+#endif

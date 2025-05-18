@@ -1,3 +1,4 @@
+///232012956 Joao Victor Silva Araruna
 /// @file codigo.hpp
 /// @brief Declaração da classe de domínio Codigo.
 
@@ -25,7 +26,7 @@ public:
     ///
      /// @brief Recupera o valor atual armazenado do código.
      /// @return Uma string com exatamente 5 dígitos numéricos.
-     
+
      string getValor() const;
 
     ///
@@ -34,7 +35,7 @@ public:
      /// O valor informado deve conter exatamente 5 caracteres e todos devem ser dígitos (0–9).
      /// @param codigo String contendo o código a ser atribuído.
      /// @throw std::invalid_argument Caso o valor não tenha exatamente 5 dígitos ou contenha caracteres não numéricos.
- 
+
     void setCodigo(string codigo);
 };
 

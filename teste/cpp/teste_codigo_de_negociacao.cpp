@@ -1,6 +1,6 @@
 /// João Vitor Frabis Zago 242039256
 
-#include "teste_codigo_de_negociacao.hpp"
+#include "testeCodNeg.hpp"
 
 void TUCodigo_de_Negociacao::setUp(){
 
@@ -27,9 +27,9 @@ void TUCodigo_de_Negociacao::testarCenarioFalha(){
         estado = FALHA;
     }
     catch(invalid_argument &excecao){
-        if(codigo_de_negociacao->getValor() == VALOR_INVALIDO)            
+        if(codigo_de_negociacao->getValor() == VALOR_INVALIDO)
             estado = FALHA;
-        
+
     }
 }
 

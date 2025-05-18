@@ -3,7 +3,7 @@
 #define TESTECPF_HPP_INCLUDED
 #include <iostream>
 #include <stdexcept>
-#include "cpf.hpp"  
+#include "cpf.hpp"
 using namespace std;
 
 class TesteCPF {

@@ -17,8 +17,8 @@ void TesteOrdem::testarCenario(){
   ordem -> setData(data);
 
       if(ordem->getData().getValor() != V_DATA_VALIDO)
-    estado = FALHA;
 
+        estado = FALHA;
 
 
     Quantidade quantidade;
@@ -26,6 +26,7 @@ void TesteOrdem::testarCenario(){
     ordem -> setQuantidade(quantidade);
 
     if(ordem->getQuantidade().getQuantidade() != V_QUANTIDADE_VALIDO)
+
       estado = FALHA;
 
 
@@ -43,11 +44,11 @@ void TesteOrdem::testarCenario(){
     codigo.setCodigo(V_CODIGO_VALIDO);
     ordem -> setCodigo(codigo);
 
-    if(ordem->getCodigoCarteira().getValor() != V_CODIGO_VALIDO)
+    if(ordem->getCodigo().getValor() != V_CODIGO_VALIDO)
       estado = FALHA;
 
 
-   
+
       Codigo_de_Negociacao c_neg;
         c_neg.setCodigoDeNegociacao(V_C_NEGOCIACAO_VALIDO);
       ordem -> setCodNegociacao(c_neg);
@@ -55,7 +56,7 @@ void TesteOrdem::testarCenario(){
       if(ordem->getCodNegociacao().getValor() != V_C_NEGOCIACAO_VALIDO)
         estado = FALHA;
 
-  
+
 
 }
 

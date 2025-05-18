@@ -1,3 +1,4 @@
+///232012956 Joao Victor Silva Araruna
 /// @file data.hpp
 /// @brief Declaração da classe de domínio Data.
 
@@ -37,7 +38,7 @@ public:
     /// @brief Recupera o valor atual da data armazenada.
     /// @return String contendo a data no formato AAAAMMDD.
     string getValor() const;
-    
+
 ///
     /// @brief Define o valor da data após validação.
     ///

@@ -60,7 +60,7 @@ bool CPF::validarNumerosCPF(int *array) {
     cout << "CPF verificador 2 erro" << endl;
     return false;
   }
-  
+
   return true;
 }
 
@@ -71,7 +71,6 @@ bool CPF::numerosIguais(int *array) {
   for (int i = 1; i < 9; i++)
     if (array[i - 1] != array[i])
       return true;
-  cout << "CPF digitos iguais" << endl;
   return false;
 }
 
@@ -94,8 +93,8 @@ void CPF::validarCPF(string valor) {
   if (!validarNumerosCPF(this->array_cpf))
     throw invalid_argument("CPF digitos verificadores invalidos");
 
-  
-  
+
+
 }
 
 // seta o cpf
