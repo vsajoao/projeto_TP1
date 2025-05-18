@@ -32,7 +32,34 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="dominio/cpp/codigo.cpp" />
+		<Unit filename="dominio/cpp/codigo_de_necociacao.cpp" />
+		<Unit filename="dominio/cpp/cpf.cpp" />
+		<Unit filename="dominio/cpp/data.cpp" />
+		<Unit filename="dominio/cpp/dinheiro.cpp" />
+		<Unit filename="dominio/cpp/nome.cpp" />
+		<Unit filename="dominio/cpp/perfil.cpp" />
+		<Unit filename="dominio/cpp/quantidade.cpp" />
+		<Unit filename="dominio/cpp/senha.cpp" />
+		<Unit filename="entidade/carteira.cpp" />
+		<Unit filename="entidade/conta.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="teste/cpp/teste-nome.cpp" />
+		<Unit filename="teste/cpp/teste_codigo_de_negociacao.cpp" />
+		<Unit filename="teste/cpp/teste_dinheiro.cpp" />
+		<Unit filename="teste/cpp/teste_quantidade.cpp" />
+		<Unit filename="teste/cpp/teste_senha.cpp" />
+		<Unit filename="teste/cpp/testecarteira.cpp" />
+		<Unit filename="teste/cpp/testecodigo.cpp" />
+		<Unit filename="teste/cpp/testeconta.cpp" />
+		<Unit filename="teste/cpp/testecpf.cpp" />
+		<Unit filename="teste/cpp/testeordem.cpp" />
+		<Unit filename="teste/cpp/testeperfil.cpp" />
+		<Unit filename="teste/hpp/testeCodNeg.hpp" />
+		<Unit filename="teste/hpp/teste_dinheiro.hpp" />
+		<Unit filename="teste/hpp/testecarteira.hpp" />
+		<Unit filename="teste/hpp/testecpf.hpp" />
+		<Unit filename="teste/hpp/testeperfil.hpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

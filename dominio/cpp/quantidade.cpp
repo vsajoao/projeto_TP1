@@ -13,5 +13,4 @@ void Quantidade::validarValorQuantidade(int valor) {
     if (valor < LIMITE_baixo || valor > LIMITE_cima) {
         throw std::invalid_argument("Codigo invalido: valor acima do limite.");
     }
-    std::cout << "Valor valido: " << valor << std::endl;
 }

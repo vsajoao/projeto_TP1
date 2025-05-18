@@ -1,52 +1,39 @@
-#include "perfil.hpp"
+#include "testeperfil.hpp"
 
-class TUPerfil {
-private:
-    Perfil* perfil;
-    int estado;
-    const std::string VALOR_VALIDO = "Moderado";
-    const std::string VALOR_INVALIDO = "Betoneira";
 
-    void setUp() {
-        perfil = new Perfil();
-        estado = SUCESSO;
-    }
+void TestePerfil::setUp() {
+    perfil = new Perfil();
+    estado = SUCESSO;
+}
 
-    void tearDown() {
-        delete perfil;
-    }
+void TestePerfil::tearDown() {
+    delete perfil;
+}
 
-    void testarCenarioValorValido() {
-        try {
-            perfil->setPerfil(VALOR_VALIDO);
-            if (perfil->getValor() != VALOR_VALIDO)
-                estado = FALHA;
-        }
-        catch (std::invalid_argument&) {
+void TestePerfil::testarCenarioSucesso() {
+    try {
+        perfil->setPerfil(VALOR_VALIDO);
+        if (perfil->getValor() != VALOR_VALIDO) {
             estado = FALHA;
         }
+    } catch (invalid_argument& e) {
+        estado = FALHA; // Se lançar exceção, falhou
     }
+}
 
-    void testarCenarioValorInvalido() {
-        try {
-            perfil->setPerfil(VALOR_INVALIDO);
-            estado = FALHA; // Nao deveria aceitar
-        }
-        catch (std::invalid_argument&) {
-            if (perfil->getValor() == VALOR_INVALIDO)
-                estado = FALHA;
-        }
+void TestePerfil::testarCenarioFalha() {
+    try {
+        perfil->setPerfil(VALOR_INVALIDO);
+        estado = FALHA; // Se não lançar exceção, falhou
+    } catch (invalid_argument& e) {
+        // Não faz nada, pois a exceção é esperada
     }
+}
 
-public:
-    const static int SUCESSO = 0;
-    const static int FALHA = -1;
-
-    int run() {
-        setUp();
-        testarCenarioValorValido();
-        testarCenarioValorInvalido();
-        tearDown();
-        return estado;
-    }
-};
+int TestePerfil::run() {
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}

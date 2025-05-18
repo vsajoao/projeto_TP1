@@ -6,12 +6,12 @@ using namespace std;
 #include <iostream>
 
 class TesteOrdem{
-  private: 
+  private:
     string V_CODIGO_VALIDO = "12345";
-    string V_DATA_VALIDO = "20002020";
+    string V_DATA_VALIDO = "20000220";
     float V_DINHEIRO_VALIDO = 3461.00f;
     int V_QUANTIDADE_VALIDO = 20310;
-    string V_C_NEGOCIACAO_VALIDO = "A1$bc3";
+    string V_C_NEGOCIACAO_VALIDO = "A12bc3";
 
 
 

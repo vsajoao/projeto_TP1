@@ -1,7 +1,7 @@
 #include "nome.hpp"
-#include <stdexcept>    
-#include <list>         
-
+#include <stdexcept>
+#include <list>
+#include <iostream>
 using namespace std;
 
 
@@ -10,7 +10,7 @@ bool Nome::validar(string nome) {
     list<char> caracteresValidos;
 
     if (nome.length() > TAMANHO_MAX) {
-        
+        ;
         throw invalid_argument("Nome excede 20 caracteres.");
     }
 
@@ -22,6 +22,7 @@ bool Nome::validar(string nome) {
         bool espaco    = (c == ' ');
 
         if (!(digito || maiuscula || minuscula || espaco)) {
+cout << "aqui" << endl;
             throw invalid_argument("Nome contém caractere inválido: '");
         }
 
@@ -33,6 +34,7 @@ bool Nome::validar(string nome) {
         if (c == ' ') {
             contEspacos++;
             if (contEspacos >= 2) {
+
                 throw invalid_argument("Nome nao pode conter dois espaços consecutivos.");
             }
         } else {
