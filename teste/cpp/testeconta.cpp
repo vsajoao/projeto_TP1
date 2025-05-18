@@ -18,7 +18,7 @@ void TesteConta::testarCenario(){
   if(conta->getCPF().getCPF() != V_CPF_VALIDO)
     estado = FALHA;
 
-  /*
+  
   Nome nome;
   nome.setNome(V_NOME_VALIDO);
   conta -> setNome(nome);
@@ -30,10 +30,10 @@ void TesteConta::testarCenario(){
   senha.setSenha(V_SENHA_VALIDO);
   conta -> setSenha(senha);
   
-  if(conta->getSenha().getSenha() != V_SENHA_VALIDO)
+  if(conta->getSenha().getValor() != V_SENHA_VALIDO)
     estado = FALHA;
   
-   */
+   
 }
 
 int TesteConta::run(){

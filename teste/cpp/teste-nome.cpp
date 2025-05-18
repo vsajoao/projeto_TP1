@@ -16,7 +16,7 @@ void TUNome::tearDown() {
 void TUNome::testarCenarioValorValido() {
     try {
         nome->setNome(VALOR_VALIDO);
-        if (nome->getNome() != VALOR_VALIDO)
+        if (nome->getValor() != VALOR_VALIDO)
             estado = FALHA;
     } catch (invalid_argument &e) {
         estado = FALHA;

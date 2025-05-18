@@ -45,7 +45,7 @@ public:
           quantidade(quantidade),
           preco(preco),
           codigoCarteira(codigoCarteira) {}
-    Ordem() {}
+
 
      /// @brief Construtor default.
     Ordem() {}

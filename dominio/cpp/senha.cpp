@@ -61,7 +61,7 @@ void Senha::validar(string senha){
 }
 
 void Senha::setSenha(string senhaProposta){
-    setSenha(senhaProposta);
+    validar(senhaProposta);
     senha = senhaProposta;
 }
 

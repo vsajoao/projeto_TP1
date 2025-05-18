@@ -48,12 +48,12 @@ void TesteOrdem::testarCenario(){
 
 
    
-      Codigo_de_Negociacao c_neg;
-        c_neg.setCodigoDeNegociacao(V_C_NEGOCIACAO_VALIDO);
-      ordem -> setCodNegociacao(c_neg);
+    Codigo_de_Negociacao c_neg;
+    c_neg.setCodigoDeNegociacao(V_C_NEGOCIACAO_VALIDO);
+    ordem -> setCodNegociacao(c_neg);
 
-      if(ordem->getCodNegociacao().getValor() != V_C_NEGOCIACAO_VALIDO)
-        estado = FALHA;
+    if(ordem->getCodNegociacao().getValor() != V_C_NEGOCIACAO_VALIDO)
+      estado = FALHA;
 
   
 

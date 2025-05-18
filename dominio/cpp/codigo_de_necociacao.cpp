@@ -15,7 +15,7 @@ void Codigo_de_Negociacao::validar(string codigo){
         throw invalid_argument("Erro: Codigo de negociação está vazio");
     }
 
-    if(!codigo.length() <= 12){
+    if(codigo.length() <= 12){
         throw invalid_argument("Erro: Código de Negociação deve ter no máximo 12 caracteres.");
     }
 
@@ -29,7 +29,7 @@ void Codigo_de_Negociacao::validar(string codigo){
 
 
 void Codigo_de_Negociacao::setCodigoDeNegociacao(string codigoProposto){
-    setCodigoDeNegociacao(codigoProposto);
+    validar(codigoProposto);
     this->codigo_de_negociacao = codigoProposto;
 }
 
