@@ -10,6 +10,7 @@
 #include "teste_senha.hpp"
 #include "testeordem.hpp"
 #include "testecarteira.hpp"
+#include "teste_data.hpp"
 using namespace std;
 
 int main() {
@@ -22,6 +23,10 @@ int main() {
     TUNome testeNome;
     int resultadoNome = testeNome.run();
     cout << "RESULTADO TUNome: " << (resultadoNome == 0 ? "SUCESSO" : "FALHA")<< endl<< endl;
+
+    TUData testeData;
+    int resultadodata = testeData.run();
+    cout << "RESULTADO TUData: " << (resultadodata == 0 ? "SUCESSO" : "FALHA")<< endl<< endl;
 
 
     TesteCPF testeCpf;

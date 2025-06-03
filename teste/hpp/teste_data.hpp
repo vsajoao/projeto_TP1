@@ -1,10 +1,10 @@
-/// JLeonardo tomé sampaio 222005448
+/// Leonardo tomé sampaio 222005448
 
 #ifndef TESTE_DATA_HPP_INCLUDED
 #define TESTE_DATA_HPP_INCLUDED
 #include <iostream>
 #include <stdexcept>
-#include "data.hpp"  
+#include "data.hpp"
 using namespace std;
 
 /// Teste unitário da classe Data

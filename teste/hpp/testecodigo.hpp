@@ -1,3 +1,5 @@
+///232012956 Joao Victor Silva Araruna
+
 #ifndef TESTE_CODIGO_HPP_INCLUDED
 #define TESTE_CODIGO_HPP_INCLUDED
 
@@ -9,22 +11,22 @@ using namespace std;
 
 class TUCodigo {
 private:
-    static const string VALOR_VALIDO;   
-    static const string VALOR_INVALIDO; 
+    static const string VALOR_VALIDO;
+    static const string VALOR_INVALIDO;
 
-    Codigo* codigo; 
-    int estado;     
+    Codigo* codigo;
+    int estado;
 
-    void setUp();                    
-    void tearDown();                 
-    void testarCenarioValorValido(); 
-    void testarCenarioValorInvalido(); 
+    void setUp();
+    void tearDown();
+    void testarCenarioValorValido();
+    void testarCenarioValorInvalido();
 
 public:
     static const int SUCESSO = 0;  ///< Constante para indicar sucesso.
     static const int FALHA   = -1; ///< Constante para indicar falha.
 
-    int run(); 
+    int run();
 };
 
 #endif // TESTE_CODIGO_HPP_INCLUDED

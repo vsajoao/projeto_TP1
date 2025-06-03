@@ -1,3 +1,5 @@
+///Arthur Frauches 241017728
+
 #ifndef TESTE_DINHEIRO_HPP_INCLUDED
 #define TESTE_DINHEIRO_HPP_INCLUDED
 
@@ -7,7 +9,7 @@
 using namespace std;     // Evita a necessidade de usar std:: antes de string, cout, etc.
 
 /**
- * 
+ *
  */
 class TUDinheiro{
 private:
